@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		   html,body{
+		        display:flex;
+		        flex-direction: column;
+		        height:100%;
+		    }
+		    div{
+		        flex:1;
+		        text-align: center;
+		    }
+		</style>
+	</head>
+
+	<body>
+		<div>
+		    <button onclick="addColor()">Click Me to Add a Color!</button>
+		</div>
+        <p id="colored-text">Look at me now!</p>
+		<script>
+		    //Write your code here!
+            function addColor(){
+                //ask for color
+                var userColor = prompt('Enter a color');
+                
+                //change background color
+                var newDiv = document.createElement("div");
+                newDiv.style.backgroundColor = userColor;
+                document.body.appendChild(newDiv);
+
+                //change text color
+                var coloredText = document.getElementById('colored-text');
+                coloredText.style.color = userColor
+            }
+		</script>
+	</body>
+</html>
